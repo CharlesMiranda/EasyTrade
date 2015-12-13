@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titulo_ultimos_add_produtos"
+        android:text="Últimos Cadastrados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ListTextView"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/lista_ultimos_add_produtos"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/titulo_ultimos_add_produtos"
+        style="@style/ListPedidos"/>
+
+    <TextView
+        android:id="@+id/titulo_escolhidos_por_cliente_produtos"
+        android:text="Escolhidos por Charles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lista_ultimos_add_produtos"
+        style="@style/ListTextView"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/lista_escolhidos_por_cliente_produtos"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/titulo_escolhidos_por_cliente_produtos"
+        style="@style/ListPedidos"/>
+</RelativeLayout>

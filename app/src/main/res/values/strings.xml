@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name"> EasyTrade</string>
+    <string name="title_activity_list_produto"> Lista de Produtos</string>
+    <string name="btn_deletar"> Deletar</string>
+    <string name="btn_carrinho"> Carrinho</string>
+</resources>

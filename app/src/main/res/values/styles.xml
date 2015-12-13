@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeComActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="EditPadrao">
+    </style>
+
+    <style name="BotaoPadrao">
+        <item name="android:height">60dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:height">60dp</item>
+    </style>
+
+    <style name="ListTextView">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="OpcoesTextView">
+        <item name="android:height">120dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ListPedidos">
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+
+
+</resources>

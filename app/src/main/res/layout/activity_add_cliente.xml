@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="br.com.nossoseventos.euvendo.activites.AddProduto">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:textSize="30dp"
+        android:text="Dados do Cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/nome"
+        android:hint="Nome"
+        android:layout_below="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/EditPadrao"/>
+
+    <EditText
+        android:id="@+id/telefone"
+        android:hint="Telefone"
+        android:layout_below="@+id/nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/EditPadrao"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:hint="Email"
+        android:layout_below="@+id/telefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/EditPadrao"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/observacao"
+        android:hint="Observacao"
+        android:layout_below="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/EditPadrao"
+        android:inputType="textMultiLine" />
+
+    <ImageButton
+        android:id="@+id/btnCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/observacao"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/camera" />
+
+    <Button
+        android:id="@+id/salvar"
+        android:text="Salvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        style="@style/BotaoPadrao"/>
+</RelativeLayout>
