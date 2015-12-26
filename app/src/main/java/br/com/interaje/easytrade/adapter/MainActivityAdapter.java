@@ -61,16 +61,19 @@ public class MainActivityAdapter extends BaseAdapter {
 
         switch (position){
             case 1:
-                imagemItem = R.drawable.clientes;
+                imagemItem = R.drawable.produtos;
                 break;
             case 2:
                 imagemItem = R.drawable.vendas;
                 break;
             case 3:
-                imagemItem = R.drawable.relatorios;
+                imagemItem = R.drawable.recomendacao;
+                break;
+            case 4:
+                imagemItem = R.drawable.ajuda;
                 break;
             default:
-                imagemItem = R.drawable.produtos;
+                imagemItem = R.drawable.clientes;
                 break;
         }
 

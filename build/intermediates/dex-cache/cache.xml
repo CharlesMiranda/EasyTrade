@@ -2,46 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jar="/home/charles/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/pre-dexed/debug/classes-807f0a54bb68b861c1fe6471b74702ae0364762e.jar" />
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="/home/charles/AndroidProjects/EasyTrade/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.9-5b4aea9f12c2578f7c59bb32c3e6e43a6da913b4.jar" />
     </item>
     <item
-        jar="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jar="/home/charles/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/pre-dexed/debug/classes-f11c545421dfaeabb7506692d08795882177a40e.jar" />
-    </item>
-    <item
-        jar="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/pre-dexed/debug/classes-0fa552f8ff0613a8177c740cbeb111394f8d31ba.jar" />
-    </item>
-    <item
-        jar="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
-        <dex dex="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/pre-dexed/debug/classes-ff390dd810a84a02909535662db2133d772365f3.jar" />
-    </item>
-    <item
-        jar="/media/charles/ffb4c3ff-6bf6-4041-94eb-788196d1acc1/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-7577300a3581d0f09a83512cb3338b03395cd11c.jar" />
-    </item>
-    <item
-        jar="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="/home/charles/AndroidProjects/EasyTrade_meu/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-1764a107a16f57bb3c16ae17b5beeca52473344e.jar" />
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="/home/charles/AndroidProjects/EasyTrade/app/build/intermediates/pre-dexed/debug/httpclient-4.3.6-6c7c6d7b890bdcb31544f5815533588e36506bb2.jar" />
     </item>
 
 </items>

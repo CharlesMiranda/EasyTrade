@@ -5,26 +5,52 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#ab2447</item>
+        <item name="colorPrimaryDark">#ab2447</item>
+        <item name="colorAccent">#d96a87</item>
+
     </style>
+
+    <style name="AppThemeComCorFundo" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ab2447</item>
+        <item name="colorPrimaryDark">#ab2447</item>
+        <item name="colorAccent">#d96a87</item>
+        <item name="android:background">#ab2447</item>
+
+    </style>
+
 
     <style name="ThemeComActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#ab2447</item>
+        <item name="colorPrimaryDark">#ab2447</item>
+        <item name="colorAccent">#d96a87</item>
     </style>
 
     <style name="EditPadrao">
+        <item name="android:height">60dp</item>
+        <item name="android:color">#d96a87</item>
+        <item name="android:textColorHint">#d96a87</item>
+
     </style>
 
     <style name="BotaoPadrao">
-        <item name="android:height">60dp</item>
+        <item name="android:height">40dp</item>
         <item name="android:textColor">#ffffff</item>
-        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:background">#ffc400</item>
+        <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="BotaoPadraoFacebook">
+        <item name="android:height">40dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 
     <style name="TextView">
         <item name="android:textSize">30sp</item>
@@ -39,17 +65,19 @@
         <item name="android:height">120dp</item>
         <item name="android:textSize">20sp</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="ListPedidos">
         <item name="android:layout_marginTop">5dp</item>
     </style>
-
 
 
 </resources>
