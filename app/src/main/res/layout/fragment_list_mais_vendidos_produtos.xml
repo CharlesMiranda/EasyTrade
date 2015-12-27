@@ -8,6 +8,5 @@
         android:id="@+id/lista_mais_vendidos_produtos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/titulo_mais_vendidos_produtos"
         style="@style/ListPedidos"/>
 </RelativeLayout>

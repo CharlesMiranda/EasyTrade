@@ -111,7 +111,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     e.printStackTrace();
                 }
                 pd.dismiss();
-                startActivity(new Intent(Login.this, MainActivity.class));
+                startActivity(new Intent(Login.this, Main2Activity.class));
             }
         }).start();
     }

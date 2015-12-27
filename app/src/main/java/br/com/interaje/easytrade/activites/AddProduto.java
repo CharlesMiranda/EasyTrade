@@ -80,7 +80,7 @@ public class AddProduto extends AppCompatActivity implements View.OnClickListene
                                 if(dao.remover(AddProduto.this.id, AddProduto.this, produtoDatabase)){
                                     Toast.makeText(AddProduto.this, "Removido com sucesso.", Toast.LENGTH_SHORT).show();
 
-                                    startActivity(new Intent(AddProduto.this, ListProduto.class));
+                                    startActivity(new Intent(AddProduto.this, ListProduto2.class));
                                     finish();
                                 }else{
                                     Toast.makeText(AddProduto.this, "Ocorreu um problema ao remover! Tente novamente.", Toast.LENGTH_SHORT).show();
@@ -97,7 +97,7 @@ public class AddProduto extends AppCompatActivity implements View.OnClickListene
 
                 break;
             default:
-                startActivity(new Intent(this, ListProduto.class));
+                startActivity(new Intent(this, ListProduto2.class));
                 finish();
                 break;
         }
@@ -163,7 +163,7 @@ public class AddProduto extends AppCompatActivity implements View.OnClickListene
                     if(salvarProduto(produto)){
                         Toast.makeText(this, "Salvo com sucesso.", Toast.LENGTH_SHORT).show();
 
-                        startActivity(new Intent(this, ListProduto.class));
+                        startActivity(new Intent(this, ListProduto2.class));
                         finish();
                     }else{
                         Toast.makeText(this, "Ocorreu um problema ao salvar! Tente novamente.", Toast.LENGTH_SHORT).show();

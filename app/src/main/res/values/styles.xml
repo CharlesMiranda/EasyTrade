@@ -30,10 +30,15 @@
         <item name="colorAccent">#d96a87</item>
     </style>
 
-    <style name="EditPadrao">
+    <style name="EditLogin">
         <item name="android:height">60dp</item>
         <item name="android:color">#d96a87</item>
         <item name="android:textColorHint">#d96a87</item>
+
+    </style>
+
+    <style name="EditPadrao">
+        <item name="android:height">60dp</item>
 
     </style>
 
@@ -42,6 +47,14 @@
         <item name="android:textColor">#ffffff</item>
         <item name="android:background">#ffc400</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BotaoSalvar">
+        <item name="android:height">40dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">#ab2447</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">10dp</item>
     </style>
 
     <style name="BotaoPadraoFacebook">
@@ -55,6 +68,10 @@
     <style name="TextView">
         <item name="android:textSize">30sp</item>
         <item name="android:height">60dp</item>
+    </style>
+
+    <style name="TituloTextView">
+        <item name="android:textColor">#ab2447</item>
     </style>
 
     <style name="ListTextView">

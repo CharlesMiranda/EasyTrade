@@ -64,7 +64,7 @@ public class Main2Activity extends AppCompatActivity
                         startActivity(new Intent(Main2Activity.this, ListCliente.class));
                         break;
                     case 1:
-                        startActivity(new Intent(Main2Activity.this, ListProduto.class));
+                        startActivity(new Intent(Main2Activity.this, ListProduto2.class));
                         break;
                     case 2:
                         startActivity(new Intent(Main2Activity.this, AddPedido.class));

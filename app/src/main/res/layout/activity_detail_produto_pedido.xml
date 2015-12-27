@@ -12,7 +12,8 @@
         android:textSize="30dp"
         android:text="Dados do Produto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        style="@style/TituloTextView"/>
 
     <br.com.interaje.easytrade.utils.FixedCenterCrop
         android:id="@+id/imgFoto"
@@ -65,17 +66,16 @@
         android:layout_height="wrap_content"
         style="@style/ListTextView"
         android:inputType="numberDecimal"
-        android:textColor="#084e0f"
+        android:textColor="#ffab00"
         android:textSize="25sp"
-        android:textStyle="bold|italic"/>
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/salvar"
-        android:text="Adicionar ao Carrinho"
-        android:layout_width="match_parent"
+        android:text="   Adicionar ao Carrinho   "
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        style="@style/BotaoPadrao"/>
+        android:layout_below="@+id/valor"
+        android:layout_centerHorizontal="true"
+        style="@style/BotaoSalvar"/>
 </RelativeLayout>

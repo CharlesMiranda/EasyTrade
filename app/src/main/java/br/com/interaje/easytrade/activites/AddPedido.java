@@ -2,12 +2,7 @@ package br.com.interaje.easytrade.activites;
 
 import br.com.interaje.easytrade.R;
 import br.com.interaje.easytrade.adapter.PedidoFragmentAdapter;
-import br.com.interaje.easytrade.database.ProdutoDatabase;
-import br.com.interaje.easytrade.database.ProdutoDatabaseHelper;
-import br.com.interaje.easytrade.repositories.impl.ProdutoDAOImpl;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -17,14 +12,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class AddPedido extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teste_tab);
+        setContentView(R.layout.activity_pedido_tab);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -76,11 +70,9 @@ public class AddPedido extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.btn_carrinho:
                 startActivity(new Intent(this, ListCarrinho.class));
-                finish();
-
                 break;
             default:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, Main2Activity.class));
                 finish();
                 break;
         }
