@@ -9,7 +9,10 @@ public class Cliente {
     private String nome, telefone, email, observacao;
     private byte[] foto;
 
-    public Cliente(){
+    // Serve para receber mensagens do servidor
+    private String idGcmUser;
+
+    public Cliente() {
 
     }
 
@@ -59,5 +62,13 @@ public class Cliente {
 
     public void setFoto(byte[] foto) {
         this.foto = foto;
+    }
+
+    public String getIdGcmUser() {
+        return idGcmUser;
+    }
+
+    public void setIdGcmUser(String idGcmUser) {
+        this.idGcmUser = idGcmUser;
     }
 }

@@ -2,9 +2,6 @@ package br.com.interaje.easytrade.activites;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,14 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 
 import br.com.interaje.easytrade.R;
 import br.com.interaje.easytrade.adapter.MainActivityAdapter;
+import br.com.interaje.easytrade.utils.SessionManager;
 
 public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +30,9 @@ public class Main2Activity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        SessionManager session = new SessionManager(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -48,7 +49,7 @@ public class Main2Activity extends AppCompatActivity
         this.inicializarElementos();
     }
 
-    private void inicializarElementos(){
+    private void inicializarElementos() {
         lista = (GridView) findViewById(R.id.lista);
 
         adapter = new MainActivityAdapter(getLista(), this);
@@ -77,7 +78,7 @@ public class Main2Activity extends AppCompatActivity
 
     }
 
-    private ArrayList<String> getLista(){
+    private ArrayList<String> getLista() {
 
         ArrayList<String> resultado = new ArrayList<String>();
 

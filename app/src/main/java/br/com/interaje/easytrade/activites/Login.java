@@ -4,12 +4,11 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -17,14 +16,18 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import br.com.interaje.easytrade.R;
+import br.com.interaje.easytrade.model.Cliente;
 import br.com.interaje.easytrade.utils.Config;
 import br.com.interaje.easytrade.utils.PrefsManager;
+import br.com.interaje.easytrade.utils.SessionManager;
 import cz.msebera.android.httpclient.Header;
 
-public class Login extends AppCompatActivity implements View.OnClickListener{
+public class Login extends AppCompatActivity implements View.OnClickListener {
 
     private Button logar;
     private ProgressDialog pd = null;
+    private EditText et_email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +37,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
     }
 
-    private void inicializarElementos(){
+    private void inicializarElementos() {
         logar = (Button) findViewById(R.id.logar);
         logar.setOnClickListener(this);
-
+        et_email = (EditText) findViewById(R.id.login);
     }
 
     private ProgressDialog dialogLogin() {
@@ -52,6 +55,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         RequestParams params = new RequestParams();
         params.add("valor", "Felipe");
 
+        final String email = et_email.getText().toString();
+
         AsyncHttpClient client = new AsyncHttpClient();
         final Context context = Login.this;
         client.setMaxRetriesAndTimeout(1, 3000);
@@ -61,6 +66,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                         String decoded = new String(responseBody);
                         Toast.makeText(context, "Resposta: " + decoded, Toast.LENGTH_LONG).show();
+
+                        // Cliente Fictício (Aqui você seta no objeto o q vem do servidor)
+                        Cliente serverUser = new Cliente();
+                        serverUser.setEmail(email);
+                        serverUser.setNome("Charles da Silva");
+                        serverUser.setId(1l);
+                        serverUser.setTelefone("8644445555");
+
+                        createSession(serverUser);
                         pd.dismiss();
 
                     }
@@ -72,6 +86,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
                     }
                 });
+    }
+
+    /**
+     * Cria uma sessão do cliente q veio lá do servidor
+     *
+     * @param serverUser
+     */
+    private void createSession(Cliente serverUser) {
+        SessionManager session = new SessionManager(Login.this);
+
+        session.createLoginSession(serverUser);
     }
 
     private void chamaTask() {
@@ -91,9 +116,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             protected void onPostExecute(Object o) {
                 super.onPostExecute(o);
                 PrefsManager session = new PrefsManager(Login.this);
-                session.addSessionParam("username","Felipe Costa");
-                session.addSessionParam("email","email@email.com");
-                session.addSessionParam("personalMessage","Tenha um ótimo dia!");
+                session.addSessionParam("username", "Felipe Costa");
+                session.addSessionParam("email", "email@email.com");
+                session.addSessionParam("personalMessage", "Tenha um ótimo dia!");
                 pd.dismiss();
                 startActivity(new Intent(Login.this, Main2Activity.class));
             }
@@ -116,7 +141,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         }).start();
     }
 
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -125,9 +149,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 pd = dialogLogin();
                 pd.show();
 
-                if(Config.AMBIENTE_DESENVOLVIMENTO == "producao") {
+                if (Config.AMBIENTE_DESENVOLVIMENTO == "producao") {
                     logar();
-                }else {
+                } else {
                     chamaTask();
                 }
                 break;
