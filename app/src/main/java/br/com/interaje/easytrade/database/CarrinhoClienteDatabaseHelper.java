@@ -9,11 +9,11 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class CarrinhoClienteDatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String NOME_TABELA = "carrinho";
+    public static final String NOME_TABELA = "carrinho_cliente";
     public static final String COLUMN_ID = "_id";
     public final static String COLUMN_CLIENTE = "cliente_id";
 
-    public static final String CREATE_TABLE = "create table clienteCarrinho"
+    public static final String CREATE_TABLE = "create table carrinho_cliente"
             + "("
             + "_id" + " integer primary key autoincrement, "
             + "cliente_id" + " integer not null "
