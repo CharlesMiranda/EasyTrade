@@ -42,6 +42,15 @@
                 android:value=".activites.Main2Activity" />
         </activity>
         <activity
+            android:name=".activites.ChooseCliente"
+            android:parentActivityName=".activites.Main2Activity"
+            android:label="@string/title_activity_choose_cliente"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activites.Main2Activity" />
+        </activity>
+        <activity
             android:name=".activites.AddCliente"
             android:label="@string/title_activity_add_cliente"
             android:parentActivityName=".activites.ListCliente"

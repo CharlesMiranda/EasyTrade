@@ -9,6 +9,7 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_add_produto">Adicionar produto</string>
     <string name="title_activity_add_cliente">Adicionar cliente</string>
+    <string name="title_activity_choose_cliente">Escolha um cliente</string>
 
     <string name="action_settings">Settings</string>
 

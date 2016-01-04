@@ -46,6 +46,9 @@ public class Main2Activity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //seta o primeiro item do nav como checkado
+        navigationView.getMenu().getItem(0).setChecked(true);
+
         this.inicializarElementos();
     }
 
@@ -68,7 +71,7 @@ public class Main2Activity extends AppCompatActivity
                         startActivity(new Intent(Main2Activity.this, ListProduto2.class));
                         break;
                     case 2:
-                        startActivity(new Intent(Main2Activity.this, AddPedido.class));
+                        startActivity(new Intent(Main2Activity.this, ChooseCliente.class));
                         break;
                 }
 
