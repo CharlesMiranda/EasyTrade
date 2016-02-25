@@ -39,7 +39,7 @@ public class PreLogin extends AppCompatActivity implements View.OnClickListener 
         switch (v.getId()) {
             case R.id.registrar:
                 /* implementar */
-
+                startActivity(new Intent(PreLogin.this, AddUsuario.class));
                 break;
             case R.id.logarEmail:
                 startActivity(new Intent(PreLogin.this, Login.class));

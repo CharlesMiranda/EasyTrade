@@ -75,6 +75,10 @@
         <item name="android:textColor">#ab2447</item>
     </style>
 
+    <style name="TituloTextViewBranco">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
     <style name="ListTextView">
         <item name="android:textSize">20sp</item>
     </style>

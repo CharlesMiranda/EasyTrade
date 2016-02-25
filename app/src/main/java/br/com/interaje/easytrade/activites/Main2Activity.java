@@ -71,7 +71,13 @@ public class Main2Activity extends AppCompatActivity
                         startActivity(new Intent(Main2Activity.this, ListProduto2.class));
                         break;
                     case 2:
-                        startActivity(new Intent(Main2Activity.this, ChooseCliente.class));
+                        startActivity(new Intent(Main2Activity.this, ListVenda.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(Main2Activity.this, AddRecomendacao.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(Main2Activity.this, ListUsuario.class));
                         break;
                 }
 
@@ -89,7 +95,7 @@ public class Main2Activity extends AppCompatActivity
         resultado.add("Produtos");
         resultado.add("Vendas");
         resultado.add("Recomendação");
-        resultado.add("Ajuda");
+        resultado.add("Minha Rede");
 
         return resultado;
     }
@@ -133,7 +139,7 @@ public class Main2Activity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        /*if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
@@ -141,7 +147,7 @@ public class Main2Activity extends AppCompatActivity
 
         } else if (id == R.id.nav_manage) {
 
-        }
+        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

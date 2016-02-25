@@ -9,15 +9,15 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Lembretes" />
-        <item
+            android:title="P/ recomendação: 4AF765" />
+        <!-- <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_share"
             android:title="Histórico de vendas" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Perfil" />
+            android:title="Perfil" />-->
     </group>
 
 </menu>

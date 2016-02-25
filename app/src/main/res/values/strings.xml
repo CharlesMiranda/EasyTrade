@@ -10,6 +10,9 @@
     <string name="title_activity_add_produto">Adicionar produto</string>
     <string name="title_activity_add_cliente">Adicionar cliente</string>
     <string name="title_activity_choose_cliente">Escolha um cliente</string>
+    <string name="title_activity_add_usuario">Adicionar usuário</string>
+    <string name="title_activity_add_recomendacao">Adicionar supervisor</string>
+
 
     <string name="action_settings">Settings</string>
 

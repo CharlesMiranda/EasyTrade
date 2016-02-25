@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import br.com.interaje.easytrade.database.CarrinhoDatabase;
 import br.com.interaje.easytrade.database.CarrinhoDatabaseHelper;
 import br.com.interaje.easytrade.model.Carrinho;
+import br.com.interaje.easytrade.model.Produto;
 import br.com.interaje.easytrade.repositories.CarrinhoDAO;
 
 /**
@@ -105,5 +106,47 @@ public class CarrinhoDAOImpl implements CarrinhoDAO {
         carrinhoDatabase.close();
         return true;
     }
+
+    /**
+     * Total Itens
+     */
+    @Override
+    public Double getTotalItens(Context context, CarrinhoDatabase carrinhoDatabase) {
+        Cursor cursor = null;
+        carrinhoDatabase.open();
+
+        try {
+            cursor = carrinhoDatabase.get().rawQuery("select produto_id from " + CarrinhoDatabaseHelper.NOME_TABELA , null);
+        } catch (Exception e) {
+
+            Log.d("CarrinhoDAOImpl",
+                    "Method: getTotalItens().\nErro ao recuperar dados do banco. Causa: "
+                            + e.getMessage());
+
+        }
+
+        Double total = 0d;
+        Carrinho entity;
+        Produto produtoCarrinho;
+
+        if (cursor != null && !cursor.isClosed()) {
+
+            while (cursor.moveToNext()) {
+                entity = new Carrinho();
+                entity.setProduto_id(cursor.getLong(cursor.getColumnIndex("produto_id")));
+                entity.setProduto(context);
+                produtoCarrinho = entity.getProduto();
+
+                total += produtoCarrinho.getValor();
+
+            }
+            cursor.close();
+
+        }
+
+        carrinhoDatabase.close();
+        return total;
+    }
+
 
 }    

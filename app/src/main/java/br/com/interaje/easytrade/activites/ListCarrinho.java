@@ -8,7 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import br.com.interaje.easytrade.R;
@@ -23,6 +25,7 @@ public class ListCarrinho extends AppCompatActivity implements View.OnClickListe
 
     private ListView lista;
     private CarrinhoAdapter adapter;
+    private TextView total;
 
 
     @Override
@@ -52,6 +55,7 @@ public class ListCarrinho extends AppCompatActivity implements View.OnClickListe
 
     private void inicializarElementos(){
         lista = (ListView) findViewById(R.id.lista);
+        total = (TextView) findViewById(R.id.total);
 
         adapter = new CarrinhoAdapter(getLista(), this);
         lista.setAdapter(adapter);
@@ -75,7 +79,7 @@ public class ListCarrinho extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-
+        total.setText("Total Itens: " + getTotalItens());
     }
 
     public List<Carrinho> getLista() {
@@ -83,6 +87,19 @@ public class ListCarrinho extends AppCompatActivity implements View.OnClickListe
         CarrinhoDAO dao = new CarrinhoDAOImpl();
 
         return dao.find(this, carrinhoDatabase, "select * from " + CarrinhoDatabaseHelper.NOME_TABELA);
+    }
+
+    public String getTotalItens() {
+        DecimalFormat numeroFormatado;
+        String numero;
+
+        CarrinhoDatabase carrinhoDatabase = new CarrinhoDatabase(new CarrinhoDatabaseHelper(this));
+        CarrinhoDAO dao = new CarrinhoDAOImpl();
+
+        numeroFormatado = new DecimalFormat("'R$ '0.00");
+        numero = numeroFormatado.format(dao.getTotalItens(this, carrinhoDatabase));
+
+        return numero;
     }
 
 

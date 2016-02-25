@@ -18,4 +18,6 @@ public interface CarrinhoDAO {
     List<Carrinho> find(Context context, CarrinhoDatabase carrinhoDatabase, String query);
 
     boolean remover(Long id, Context context, CarrinhoDatabase carrinhoDatabase);
+
+    Double getTotalItens(Context context, CarrinhoDatabase carrinhoDatabase);
 }

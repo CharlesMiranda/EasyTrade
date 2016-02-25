@@ -78,6 +78,37 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activites.Main2Activity" />
         </activity>
+        <activity
+            android:name=".activites.AddUsuario"
+            android:label="@string/title_activity_add_usuario"
+            android:parentActivityName=".activites.PreLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeComCorFundo" />
+
+        <activity
+            android:name=".activites.ListVenda"
+            android:parentActivityName=".activites.Main2Activity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activites.Main2Activity" />
+        </activity>
+
+        <activity
+            android:name=".activites.ListUsuario"
+            android:parentActivityName=".activites.Main2Activity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activites.Main2Activity" />
+        </activity>
+
+        <activity
+            android:name=".activites.AddRecomendacao"
+            android:label="@string/title_activity_add_recomendacao"
+            android:parentActivityName=".activites.AddRecomendacao"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeComActionBar" />
     </application>
 
 </manifest>
